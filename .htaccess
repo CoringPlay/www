@@ -1,0 +1,12 @@
+
+
+php_flag display_errors off 
+DirectoryIndex index.php
+
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule .* index.php [L]
+
+RewriteRule ^room/([0-9]+)$ room/?num=$1 [L]
